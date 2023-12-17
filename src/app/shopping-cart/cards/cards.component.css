@@ -1,0 +1,67 @@
+.padding-0 {
+    padding-right: 0;
+    padding-left: 1;
+}
+
+.card-header {
+    height: 100px;
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(to right, #2196F3, #4CAF50);
+}
+
+.btn-gradient:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.gradient-bg {
+    background: linear-gradient(to right, #ff66b2, #66a3ff); /* Gradient from pink to blue */
+}
+
+
+@keyframes colorChange {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+.product-image-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+
+.product-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.product-details h5,
+.product-details p {
+    margin: 0;
+    color: #fff;
+}
+

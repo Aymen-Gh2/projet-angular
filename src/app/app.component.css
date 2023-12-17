@@ -1,0 +1,34 @@
+/* Navbar container */
+.container.d-flex.flex-wrap.p-3.px-md-4.mb-3.bg-white.border-bottom {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar links */
+nav.navbar-light.bg-light a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav.navbar-light.bg-light a:hover {
+    color: #0056b3;
+}
+
+/* Active link */
+nav.navbar-light.bg-light a.router-link-active {
+    color: #0056b3;
+}
+
+/* Logout button */
+button.btn.btn-default {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    transition: background-color 0.3s ease;
+}
+
+button.btn.btn-default:hover {
+    background-color: #bd2130;
+}

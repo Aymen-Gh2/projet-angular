@@ -1,0 +1,26 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    <div class="col mb-4" *ngFor="let p of productOrders">
+        <div class="card shadow">
+            <div class="card-header gradient-bg text-white text-center">
+                <h4 class="gradient-text">{{ p.product.designation }}</h4>
+            </div>            
+            <div class="card-body">
+                <a href="#" class="product-image-link">
+                    <img class="card-img-top" src="{{ p.product.imageart }}" alt="{{ p.product.designation }}">
+                </a>
+            </div>   
+            
+            <div class="card-footer">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <p class="card-text text-muted">Price: {{ p.product.prix }} TND</p>
+                        <button class="btn btn-gradient btn-block" (click)="addProductToCart(p)"
+                            [disabled]="p.product.qtestock === 0">
+                            <i class="bi bi-cart-plus-fill"></i> Buy now
+                        </button>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+</div>

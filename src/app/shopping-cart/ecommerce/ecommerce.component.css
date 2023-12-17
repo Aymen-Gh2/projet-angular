@@ -1,0 +1,37 @@
+/* ecommerce.component.css */
+
+/* Reduce navbar height */
+.navbar {
+    height: 60px; /* Adjust the height as needed */
+}
+
+/* Remove fixed positioning */
+.navbar.fixed-top {
+    position: relative;
+    z-index: 2; /* Set a higher z-index for the ecommerce navbar */
+}
+
+/* Adjust styling for the brand/logo */
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+/* Add some padding to navbar items for better spacing */
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem; /* Adjust the padding as needed */
+}
+
+/* Override collapsed styles for mobile view */
+.navbar-toggler {
+    border-color: #fff; /* Adjust the color as needed */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Adjust the color as needed */
+}
+
+/* Optional: Add some styling for the active link */
+.navbar-nav .nav-item.active .nav-link {
+    color: #fff; /* Adjust the color as needed */
+    background-color: #007bff; /* Adjust the background color as needed */
+}

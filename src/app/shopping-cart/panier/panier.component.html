@@ -1,0 +1,22 @@
+<div class="card border-primary mb-3" style="max-width: 50rem;" id="htmlData">
+    <div class="card-header bg-primary text-white text-center">
+        <h4>Shopping Cart</h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Total: {{ total }}</h5>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Items bought:</h6>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let order of productAdded">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>{{ order.product.designation }}</span>
+                    <input type="number" class="form-control" min="0" [max]="order.product.qtestock"
+                        [(ngModel)]="order.quantity" (click)="addTotal(order.product.prix, order.quantity)" />
+                </div>
+            </li>
+        </ul>
+        <button class="btn btn-light btn-block mt-3" (click)="checkoutProduct()" [disabled]="productAdded.length === 0">
+            Checkout
+        </button>
+    </div>
+</div>
